@@ -1,0 +1,6 @@
+@TTMOnlineChat_HostAddress = http://localhost:5271
+
+GET {{TTMOnlineChat_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

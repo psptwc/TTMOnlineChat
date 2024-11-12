@@ -8,14 +8,24 @@ namespace TTMOnlineChat
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
+
             builder.Services.AddSignalR(); // Services SignalR connected
 
             var app = builder.Build();
 
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
+            app.UseCors();
 
-            app.MapHub<ChatHub>("/chatHub"); // ChatHub handles requests at /chat
+            app.MapHub<ChatHub>("/chat"); // ChatHub handles requests at /chat
 
             app.Run();
         }

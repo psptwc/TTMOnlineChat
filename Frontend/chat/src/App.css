@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-background {
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  max-width: 400px;
+  height: 100%;
+  border-radius: 5px;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background: #3eaae1;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+  color: #fff;
+}
+
+.button:hover {
+  background: #3e44e1;
 }

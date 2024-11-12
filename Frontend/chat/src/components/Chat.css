@@ -4,8 +4,15 @@
     overflow-y: scroll;
 }
 
+.chat-head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .button-close-chat {
-    background: red;
+    background: #d0312d;
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
@@ -16,5 +23,5 @@
   }
   
   .button-close-chat:hover {
-    background: darkred;
+    background: #900d09;
   }

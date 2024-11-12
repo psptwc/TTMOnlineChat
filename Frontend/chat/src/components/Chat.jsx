@@ -18,10 +18,10 @@ export default function Chat({ messages, chatName, closeChat, sendMessage }) {
 
   return (
     <section>
-      <div>
+      <div className="chat-head">
         <h2>{chatName}</h2>
         <button className="button-close-chat" type="submit" onClick={closeChat}>
-          Close chat
+          Close
         </button>
       </div>
 

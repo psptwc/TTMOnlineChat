@@ -21,6 +21,13 @@ namespace TTMOnlineChat
 
             builder.Services.AddSignalR(); // Services SignalR connected
 
+            builder.Services.AddStackExchangeRedisCache(options =>
+            {
+                var connection = builder.Configuration
+                    .GetConnectionString("Redis");
+                options.Configuration = connection;
+            });
+
             var app = builder.Build();
 
             app.UseCors();

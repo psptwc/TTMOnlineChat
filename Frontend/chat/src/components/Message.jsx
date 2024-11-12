@@ -1,8 +1,10 @@
+import "./Message.css"
+
 export default function Message({ messageInfo }) {
   return (
-    <div>
-      <span>{messageInfo.userName}</span>
-      <div>{messageInfo.message}</div>
+    <div className="message-item">
+      <span className="message-username">{messageInfo.userName}</span>
+      <div className="message-text">{messageInfo.message}</div>
     </div>
   );
 }

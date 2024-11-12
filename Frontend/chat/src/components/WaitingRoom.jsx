@@ -11,7 +11,7 @@ export default function WaitingRoom({ joinChat }) {
 
   return (
     <section>
-      <h2>Talk To Me</h2>
+      <h2 style={{marginBottom: "1rem"}}>Talk To Me</h2>
       <form onSubmit={onSubmit}>
         <label htmlFor="userName">Your name</label>
         <input

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTMOnlineChat", "TTMOnlineChat\TTMOnlineChat.csproj", "{B6C3087F-BE79-4502-A9B0-32AA6013028D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TTMOnlineChat", "TTMOnlineChat\TTMOnlineChat.csproj", "{B6C3087F-BE79-4502-A9B0-32AA6013028D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{67864092-93CA-4938-A9C1-E058E945FD39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B6C3087F-BE79-4502-A9B0-32AA6013028D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C3087F-BE79-4502-A9B0-32AA6013028D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C3087F-BE79-4502-A9B0-32AA6013028D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67864092-93CA-4938-A9C1-E058E945FD39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67864092-93CA-4938-A9C1-E058E945FD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67864092-93CA-4938-A9C1-E058E945FD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67864092-93CA-4938-A9C1-E058E945FD39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

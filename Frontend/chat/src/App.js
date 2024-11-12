@@ -16,8 +16,7 @@ function App() {
       .build();
 
     connection.on("ReceiveMessage", (userName, message) => {
-      console.log(userName);
-      console.log(message);
+      setMessages((messages) => [...messages, { userName, message }]);
     });
 
     try {
@@ -25,9 +24,19 @@ function App() {
       await connection.invoke("JoinChat", { userName, chatName });
 
       setConnection(connection);
+      setChatName(chatName);
     } catch (error) {
       console.log(error);
     }
+  }
+
+  const sendMessage = (message) => {
+    connection.invoke("SendMessage", message);
+  };
+
+  const closeChat = async () => {
+    await connection.stop();
+    setConnection(null);
   }
 
   return (
@@ -35,7 +44,12 @@ function App() {
       <main>
         <div className="chat-background">
           {connection ? (
-            <Chat messages={messages} chatName={chatName} closeChat />
+            <Chat
+              messages={messages}
+              chatName={chatName}
+              closeChat={closeChat}
+              sendMessage={sendMessage}
+            />
           ) : (
             <WaitingRoom joinChat={joinChat} />
           )}

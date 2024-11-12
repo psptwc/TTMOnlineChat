@@ -1,20 +1,45 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Message from "./Message";
+import "./Chat.css";
 
-export default function Chat({ messages, chatName, closeChat }) {
+export default function Chat({ messages, chatName, closeChat, sendMessage }) {
+  const [message, setMessage] = useState("");
+  const messageEndRef = useRef(null);
+
+  const onSendMessage = (e) => {
+    e.preventDefault();
+    sendMessage(message);
+    setMessage("");
+  };
+
+  useEffect(() => {
+    messageEndRef.current.scrollIntoView();
+  }, [messages]);
+
   return (
     <section>
-      <h2>{chatName}</h2>
-      <button onClick={closeChat}>Close chat</button>
+      <div>
+        <h2>{chatName}</h2>
+        <button className="button-close-chat" type="submit" onClick={closeChat}>
+          Close chat
+        </button>
+      </div>
 
       <div className="screen-messages">
         {messages.map((messageInfo, index) => (
           <Message messageInfo={messageInfo} key={index} />
         ))}
+        <span ref={messageEndRef} />
       </div>
 
-      <form>
-        <input style={{marginTop: "1rem"}}className="control input-message" placeholder="Text" />
+      <form onSubmit={onSendMessage}>
+        <input
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          className="control input-message"
+          placeholder="Text"
+          type="text"
+        />
         <button className="button send-message" type="submit">
           Send
         </button>

@@ -1,0 +1,16 @@
+.message-item {
+    background: #fff;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.message-username {
+    font-size: 14px;
+    color: gray;
+}
+
+.message-text {
+    font-size: 16px;
+}

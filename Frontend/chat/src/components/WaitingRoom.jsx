@@ -4,13 +4,14 @@ export default function WaitingRoom({ joinChat }) {
   const [userName, setUserName] = useState();
   const [chatName, setChatName] = useState();
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        joinChat(userName, chatName)
-    }
+  const onSubmit = (e) => {
+    e.preventDefault();
+    joinChat(userName, chatName);
+  };
 
   return (
     <section>
+      <h2>Talk To Me</h2>
       <form onSubmit={onSubmit}>
         <label htmlFor="userName">Your name</label>
         <input
